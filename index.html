@@ -888,7 +888,7 @@
         contactsTitle: 'Свяжитесь с нами'
        },
        et: {
-         heroTitle: 'Premium nahahoolduse lahendused',
+         heroTitle: 'Premium nahahoolduse <span style="filter:brightness(2.2)">la</span>hendused',
          heroText: 'Tutvu meie hoolikalt valitud kvaliteetsete nahahooldustoodetega, mis taastavad, kaitsevad ja toidavad nahka.',
          cartTitle: 'Sinu ostukorv',
          cart: 'Ostukorv',
@@ -1641,7 +1641,7 @@
    }
    
      function updateUIText() {
-       document.getElementById('heroTitle').textContent = t('heroTitle');
+       document.getElementById('heroTitle').innerHTML = t('heroTitle');
        document.getElementById('heroText').textContent = t('heroText');
        document.getElementById('cartTitle').textContent = t('cartTitle');
        document.getElementById('cartBtnLabel').textContent = t('cart');
