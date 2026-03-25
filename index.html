@@ -1636,7 +1636,8 @@
       ` +
       categories.map(c => `
         <button
-          class="px-4 py-2 border rounded-full filter-btn ${c.id === currentCategory ? 'bg-black text-white border-black' : ''}"
+          class="px-4 py-2 border rounded-full filter-btn ${c.id === currentCategory ? 'bg-black border-black' : 'border-white'}"
+          style="color:white;"
           data-cat="${c.id}"
           type="button"
         >
