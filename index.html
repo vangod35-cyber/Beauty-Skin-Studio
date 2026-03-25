@@ -21,6 +21,7 @@
      .modal-close { position: absolute; top: 1rem; right: 1rem; cursor: pointer; font-size: 1.5rem; }
      .language-btn { cursor: pointer; padding: 0.35rem 0.85rem; border-radius: 0.5rem; border: 1px solid #c9a84c; color: #c9a84c; background: transparent; }
      .language-btn.active { background: #c9a84c; color: white; border-color: #c9a84c; }
+     #searchInput::placeholder { color: #888; }
    </style>
  </head>
  <body>
@@ -55,6 +56,7 @@
        type="text"
        placeholder="Search products..."
        class="border rounded-lg px-3 py-2 w-64 max-w-full"
+       style="background:#111;color:#c9a84c;border-color:#333;placeholder-color:#888;"
      >
  
      <button id="cartBtn" class="relative px-4 py-2 rounded-full font-semibold" style="background:#c9a84c;color:white;" type="button">
