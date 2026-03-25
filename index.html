@@ -19,8 +19,8 @@
      .modal { position: fixed; inset: 0; background: rgba(0,0,0,0.5); display: flex; justify-content: center; align-items: center; z-index: 60; }
      .modal-content { background: white; border-radius: 1rem; max-width: 560px; width: 92%; padding: 2rem; position: relative; max-height: 90vh; overflow-y: auto; }
      .modal-close { position: absolute; top: 1rem; right: 1rem; cursor: pointer; font-size: 1.5rem; }
-     .language-btn { cursor: pointer; padding: 0.35rem 0.85rem; border-radius: 0.5rem; border: 1px solid #ccc; }
-     .language-btn.active { background: #111; color: white; border-color: #111; }
+     .language-btn { cursor: pointer; padding: 0.35rem 0.85rem; border-radius: 0.5rem; border: 1px solid #c9a84c; color: #c9a84c; background: transparent; }
+     .language-btn.active { background: #c9a84c; color: white; border-color: #c9a84c; }
    </style>
  </head>
  <body>
@@ -42,7 +42,7 @@
   </form>
 
    <header class="shadow p-4 flex flex-wrap justify-between items-center gap-3" style="background-image:url('8866a.jpg');background-size:cover;background-position:center;">
-     <div class="text-2xl font-bold">Beauty Skin Studio</div>
+     <div class="text-2xl font-bold" style="color:#c9a84c;">Beauty Skin Studio</div>
  
      <div class="flex gap-2">
        <button class="language-btn active" data-lang="en" type="button">EN</button>
@@ -57,7 +57,7 @@
        class="border rounded-lg px-3 py-2 w-64 max-w-full"
      >
  
-     <button id="cartBtn" class="relative bg-black text-white px-4 py-2 rounded-full" type="button">
+     <button id="cartBtn" class="relative px-4 py-2 rounded-full font-semibold" style="background:#c9a84c;color:white;" type="button">
        <span id="cartBtnLabel">Cart</span>
        <span id="cartBadge" class="absolute -top-2 -right-2 bg-red-500 w-5 h-5 flex items-center justify-center text-xs rounded-full">0</span>
      </button>
