@@ -28,6 +28,7 @@
   <!-- Hidden static form for Netlify detection -->
   <form name="order" netlify netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="bot-field">
+    <input type="hidden" name="order-number">
     <input type="hidden" name="order-items">
     <input type="hidden" name="order-total">
     <input type="text" name="first-name">
@@ -132,6 +133,7 @@
           <h2 class="text-xl font-bold mb-5" id="chk_billingDetails">Billing Details</h2>
           <form id="checkoutForm" name="order" action="/success.html" netlify netlify-honeypot="bot-field" novalidate>
             <input type="hidden" name="bot-field">
+            <input type="hidden" name="order-number" id="hidden_orderNumber">
             <input type="hidden" name="order-items" id="hidden_orderItems">
             <input type="hidden" name="order-total" id="hidden_orderTotal">
             <div class="grid grid-cols-2 gap-4 mb-4">
@@ -1925,6 +1927,9 @@
          alert(t('fillRequired'));
          return;
        }
+       // Generate order number
+       const orderNum = 'BSS-' + Date.now().toString().slice(-6);
+       document.getElementById('hidden_orderNumber').value = orderNum;
        // Populate hidden order fields for Netlify
        let itemsList = '';
        cart.forEach(c => {
